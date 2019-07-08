@@ -1,0 +1,17 @@
+plugin.tx_ipmcline_cline {
+	view {
+		# cat=plugin.tx_ipmcline_cline/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:ipm_cline/Resources/Private/Templates/
+		# cat=plugin.tx_ipmcline_cline/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:ipm_cline/Resources/Private/Partials/
+		# cat=plugin.tx_ipmcline_cline/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:ipm_cline/Resources/Private/Layouts/
+	}
+	settings {
+		# customsubcategory=css=CSS
+		css {
+			# cat=plugin.tx_ipmcline_cline/css/a; type=boolean; label=Include extension CSS
+			cline = 1
+		}
+	}
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-04-04T16:46:38Z" product-name="ipm_cline">
+		<header/>
+		<body>
+			<trans-unit id="tx_ipmcline_domain_model_cline">
+				<source>C-Line</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

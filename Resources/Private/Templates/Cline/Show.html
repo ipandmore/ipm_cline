@@ -1,0 +1,39 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+	<div class="cline-show">
+		<f:if condition="{oneLiner}">
+			<f:then>
+				<div class="one-liner">
+					<f:format.html parseFuncTSPath="lib.parseFunc">{oneLiner}</f:format.html>
+				</div>
+			</f:then>
+			<f:else>
+				<f:if condition="{settings.startWithCopyrightLabel}">
+					<div class="ipm-cline-sign"><p>&copy;</p></div>
+				</f:if>
+				<div class="ipm-cline-date">
+					<p>
+						<f:if condition="{settings.copyrightStart}!=0">
+							<f:format.date format="{settings.copyrightDateFormat}">{settings.copyrightStart}</f:format.date>
+						</f:if>
+						<f:if condition="{settings.copyrightStart}!=0">
+							<f:then>
+								<f:if condition="{settings.copyrightEnd}!=0">
+									<f:then> - </f:then>
+									<f:else></f:else>
+								</f:if>
+							</f:then>
+						</f:if>
+						<f:if condition="{settings.copyrightEnd}!=0">
+							<f:format.date format="{settings.copyrightDateFormat}">{settings.copyrightEnd}</f:format.date>
+						</f:if>
+					</p>
+				</div>
+				<div class="ipm-cline-body">
+					<f:format.html>{settings.bodytext}</f:format.html>
+				</div>
+			</f:else>
+		</f:if>
+	</div>
+</f:section>

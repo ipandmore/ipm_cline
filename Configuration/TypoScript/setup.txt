@@ -1,0 +1,18 @@
+plugin.tx_ipmcline_cline {
+	view {
+		templateRootPaths.0 = {$plugin.tx_ipmcline_cline.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_ipmcline_cline.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_ipmcline_cline.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_ipmcline_cline.persistence.storagePid}
+	}
+}
+
+[globalVar = LIT:0 < {$plugin.tx_ipmcline_cline.settings.css.cline}]
+page {
+	includeCSS {
+	  cline = EXT:ipm_cline/Resources/Public/Css/style.css
+	}
+}
+[end]

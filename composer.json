@@ -1,0 +1,39 @@
+{
+  "name": "ipandmore/ipm-cline",
+  "type": "typo3-cms-extension",
+  "description": "Add copyright lines to your TYPO3 project. With the \"today\"-Feature you must never rewrite the year (e.g. 2019 to 2020) at New Year.",
+  "version": "1.3.3",
+  "homepage": "https://www.ipandmore.de",
+  "license": [
+    "GPL-2.0+"
+  ],
+  "keywords": [
+    "TYPO3",
+    "extension",
+    "copyright",
+    "cline",
+    "copyrightline",
+    "imprint"
+  ],
+  "authors": [
+    {
+      "name": "ip&more GmbH",
+      "email": "developer@ipandmore.de",
+      "homepage": "https://www.ipandmore.de",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "typo3/cms-core": ">=8.7.0,<10.0",
+	"typo3/cms-rte-ckeditor": ">=8.7.0,<10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ipandmore\\IpmCline\\": "Classes/"
+    }
+  },
+  "replace": {
+    "ipm_cline": "self.version",
+    "typo3-ter/ipm-cline": "self.version"
+  }
+}

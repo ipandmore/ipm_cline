@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-04-04T16:46:38Z" product-name="ipm_cline">
+		<header/>
+		<body>
+			<trans-unit id="tx_ipmcline_domain_model_cline">
+				<source>C-Line</source>
+			</trans-unit>
+			<trans-unit id="flexform.main">
+				<source>C-Line options</source>
+			</trans-unit>
+			<trans-unit id="flexform.mergeFieldsAsAOneLiner">
+				<source>Merge all fields to a "oneliner" (No splitting by div-Elements)</source>
+			</trans-unit>
+			<trans-unit id="flexform.startWithCopyrightLabel">
+				<source>Set "©" at beginning</source>
+			</trans-unit>
+			<trans-unit id="flexform.copyrightStart">
+				<source>Copyright start</source>
+			</trans-unit>
+			<trans-unit id="flexform.copyrightEnd">
+				<source>Copyright end</source>
+			</trans-unit>
+			<trans-unit id="flexform.copyrightEndTilNow">
+				<source>Use "today" as copyright end (Overrides the field "Copyright end")</source>
+			</trans-unit>
+			<trans-unit id="flexform.copyrightDateFormat">
+				<source>Date format (d-m-Y => 00-00-0000)</source>
+			</trans-unit>
+			<trans-unit id="flexform.bodytext">
+				<source>Copyright text</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

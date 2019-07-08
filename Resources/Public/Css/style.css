@@ -1,0 +1,11 @@
+.tx-ipm-cline .cline-show .ipm-cline-sign,
+.tx-ipm-cline .cline-show .ipm-cline-date,
+.tx-ipm-cline .cline-show .ipm-cline-body {
+	display: table-cell;
+}
+.tx-ipm-cline .cline-show>div {
+	padding-left: 0.2rem;
+}
+.tx-ipm-cline .cline-show>div:first-child {
+	padding-left: 0;
+}
