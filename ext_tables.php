@@ -4,6 +4,7 @@ if (!defined('TYPO3_MODE')) {
 }
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'IPM C-Line');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Extended', 'IPM C-Line CSS');
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
 	$_EXTKEY,

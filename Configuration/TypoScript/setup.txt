@@ -8,11 +8,3 @@ plugin.tx_ipmcline_cline {
 		storagePid = {$plugin.tx_ipmcline_cline.persistence.storagePid}
 	}
 }
-
-[globalVar = LIT:0 < {$plugin.tx_ipmcline_cline.settings.css.cline}]
-page {
-	includeCSS {
-	  cline = EXT:ipm_cline/Resources/Public/Css/style.css
-	}
-}
-[end]

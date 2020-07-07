@@ -7,11 +7,4 @@ plugin.tx_ipmcline_cline {
 		# cat=plugin.tx_ipmcline_cline/file; type=string; label=Path to template layouts (FE)
 		layoutRootPath = EXT:ipm_cline/Resources/Private/Layouts/
 	}
-	settings {
-		# customsubcategory=css=CSS
-		css {
-			# cat=plugin.tx_ipmcline_cline/css/a; type=boolean; label=Include extension CSS
-			cline = 1
-		}
-	}
 }

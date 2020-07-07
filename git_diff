@@ -1,0 +1,137 @@
+diff --git a/Configuration/TypoScript/constants.txt b/Configuration/TypoScript/constants.txt
+index 22d8d09..d641af3 100644
+--- a/Configuration/TypoScript/constants.txt
++++ b/Configuration/TypoScript/constants.txt
+@@ -7,11 +7,4 @@ plugin.tx_ipmcline_cline {
+ 		# cat=plugin.tx_ipmcline_cline/file; type=string; label=Path to template layouts (FE)
+ 		layoutRootPath = EXT:ipm_cline/Resources/Private/Layouts/
+ 	}
+-	settings {
+-		# customsubcategory=css=CSS
+-		css {
+-			# cat=plugin.tx_ipmcline_cline/css/a; type=boolean; label=Include extension CSS
+-			cline = 1
+-		}
+-	}
+ }
+diff --git a/Configuration/TypoScript/setup.txt b/Configuration/TypoScript/setup.txt
+index 0d6755a..873f794 100644
+--- a/Configuration/TypoScript/setup.txt
++++ b/Configuration/TypoScript/setup.txt
+@@ -8,11 +8,3 @@ plugin.tx_ipmcline_cline {
+ 		storagePid = {$plugin.tx_ipmcline_cline.persistence.storagePid}
+ 	}
+ }
+-
+-[globalVar = LIT:0 < {$plugin.tx_ipmcline_cline.settings.css.cline}]
+-page {
+-	includeCSS {
+-	  cline = EXT:ipm_cline/Resources/Public/Css/style.css
+-	}
+-}
+-[end]
+diff --git a/README.rst b/README.rst
+index 6392d4e..4656501 100644
+--- a/README.rst
++++ b/README.rst
+@@ -2,6 +2,11 @@
+ Documentation for IPM C-Line (ipm_cline)
+ ========================================
+ 
++Important!
++==============
++Version 1.4.0 moves predefined css from main typoscript to extended; if you want to use it, you have to include the additional "IPM C-Line Extended" TypoScript in your root page.
++
++
+ General
+ =======
+ Add copyright lines to your TYPO3 project. With the "today"-Feature you must never rewrite the year (e.g. 2019 to 2020) at New Year.
+@@ -25,7 +30,7 @@ Install via Extension Manager
+ -----------------------------
+ 
+ 1. Open Extension Manager in your TYPO3 backend
+-2. Search for ``ipm_sline``
++2. Search for ``ipm_cline``
+ 3. Download and install it
+ 
+ Integrators Guide
+diff --git a/build/ipm_cline.1.3.3.zip b/build/ipm_cline.1.3.3.zip
+deleted file mode 100644
+index 6e31740..0000000
+Binary files a/build/ipm_cline.1.3.3.zip and /dev/null differ
+diff --git a/composer.json b/composer.json
+index c095c9d..d5b2c91 100644
+--- a/composer.json
++++ b/composer.json
+@@ -1,12 +1,7 @@
+ {
+   "name": "ipandmore/ipm-cline",
++  "description": "BREAKING CHANGE with version 1.4.0: predefined css must be included by static template; Add copyright lines to your TYPO3 project. With the \"today\"-Feature you must never rewrite the year (e.g. 2019 to 2020) at New Year.",
+   "type": "typo3-cms-extension",
+-  "description": "Add copyright lines to your TYPO3 project. With the \"today\"-Feature you must never rewrite the year (e.g. 2019 to 2020) at New Year.",
+-  "version": "1.3.3",
+-  "homepage": "https://www.ipandmore.de",
+-  "license": [
+-    "GPL-2.0+"
+-  ],
+   "keywords": [
+     "TYPO3",
+     "extension",
+@@ -15,6 +10,10 @@
+     "copyrightline",
+     "imprint"
+   ],
++  "homepage": "https://www.ipandmore.de",
++  "license": [
++    "GPL-2.0-or-later"
++  ],
+   "authors": [
+     {
+       "name": "ip&more GmbH",
+@@ -24,16 +23,15 @@
+     }
+   ],
+   "require": {
+-    "typo3/cms-core": ">=8.7.0,<10.0",
+-	"typo3/cms-rte-ckeditor": ">=8.7.0,<10.0"
++    "typo3/cms-core": ">=8.7.0 <10.0",
++	"typo3/cms-rte-ckeditor": ">=8.7.0 <10.0"
++  },
++  "replace": {
++    "typo3-ter/ipm-cline": "self.version"
+   },
+   "autoload": {
+     "psr-4": {
+       "Ipandmore\\IpmCline\\": "Classes/"
+     }
+-  },
+-  "replace": {
+-    "ipm_cline": "self.version",
+-    "typo3-ter/ipm-cline": "self.version"
+   }
+ }
+diff --git a/ext_emconf.php b/ext_emconf.php
+index 0bea1fc..d33b486 100644
+--- a/ext_emconf.php
++++ b/ext_emconf.php
+@@ -12,7 +12,7 @@ $EM_CONF[$_EXTKEY] = array(
+ 	'uploadfolder' => '0',
+ 	'createDirs' => '',
+ 	'clearCacheOnLoad' => 0,
+-	'version' => '1.3.3',
++	'version' => '1.4.0',
+ 	'constraints' => array(
+ 		'depends' => array(
+ 			'typo3' => '8.7.0-9.5.99',
+diff --git a/ext_tables.php b/ext_tables.php
+index de858ee..9c83613 100644
+--- a/ext_tables.php
++++ b/ext_tables.php
+@@ -4,6 +4,7 @@ if (!defined('TYPO3_MODE')) {
+ }
+ 
+ \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'IPM C-Line');
++\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Extended', 'IPM C-Line CSS');
+ 
+ \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+ 	$_EXTKEY,
