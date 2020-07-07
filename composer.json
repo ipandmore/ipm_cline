@@ -23,8 +23,8 @@
     }
   ],
   "require": {
-    "typo3/cms-core": ">=8.7.0 <10.0",
-	"typo3/cms-rte-ckeditor": ">=8.7.0 <10.0"
+    "typo3/cms-core": ">=10.0.0 <11.0",
+	"typo3/cms-rte-ckeditor": ">=10.0.0 <11.0"
   },
   "replace": {
     "typo3-ter/ipm-cline": "self.version"
