@@ -1,17 +1,15 @@
 <?php
-defined('TYPO3_MODE') || die();
+if (!defined('TYPO3_MODE')) {
+	die('Access denied.');
+}
 
-call_user_func(
-    function () {
-
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Ipandmore.IpmCline',
-            'Cline',
-            array(
-                'Cline' => 'show',
-            ),
-            // non-cacheable actions
-            array()
-        );
-    }
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Ipandmore.' . $_EXTKEY,
+	'Cline',
+	array(
+		'Cline' => 'show',
+	),
+	// non-cacheable actions
+	array(
+	)
 );
