@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <T3DataStructure>
 	<sheets>
 		<main>
@@ -28,6 +29,7 @@
 							<label>LLL:EXT:ipm_cline/Resources/Private/Language/locallang.xlf:flexform.copyrightStart</label>
 							<config>
 								<type>input</type>
+								<renderType>inputDateTime</renderType>
 								<eval>date</eval>
 							</config>
 						</TCEforms>
@@ -37,6 +39,7 @@
 							<label>LLL:EXT:ipm_cline/Resources/Private/Language/locallang.xlf:flexform.copyrightEnd</label>
 							<config>
 								<type>input</type>
+								<renderType>inputDateTime</renderType>
 								<eval>date</eval>
 							</config>
 						</TCEforms>
@@ -69,6 +72,7 @@
 								  <cols>40</cols>
 								  <rows>5</rows>
 		                          <enableRichtext>1</enableRichtext>
+								  <richtextConfiguration>default</richtextConfiguration>
 								</config>
 						</TCEforms>
 					</settings.bodytext>
