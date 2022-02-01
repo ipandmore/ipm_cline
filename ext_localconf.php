@@ -1,17 +1,22 @@
 <?php
-defined('TYPO3_MODE') || die();
 
-call_user_func(
-    function () {
+use Ipandmore\IpmCline\Controller\ClineController;
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Ipandmore.IpmCline',
-            'Cline',
-            array(
-                'Cline' => 'show',
-            ),
-            // non-cacheable actions
-            array()
-        );
-    }
-);
+// Prevent script from being called directly
+defined('TYPO3') or die();
+
+// encapsulate all locally defined variables
+(static function() {
+    ExtensionUtility::configurePlugin(
+        'Ipandmore.IpmCline',
+        'Cline',
+        [
+            ClineController::class => 'show',
+        ],
+        // non-cacheable actions
+        [
+            ClineController::class => '',
+        ]
+    );
+})();
