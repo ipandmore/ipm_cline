@@ -33,5 +33,10 @@
     "psr-4": {
       "Ipandmore\\IpmCline\\": "Classes/"
     }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "ipm_cline"
+    }
   }
 }
