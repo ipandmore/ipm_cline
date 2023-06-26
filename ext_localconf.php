@@ -9,7 +9,7 @@ defined('TYPO3') or die();
 // encapsulate all locally defined variables
 (static function() {
     ExtensionUtility::configurePlugin(
-        'ipm_cline',
+        'IpmCline',
         'Cline',
         [
             ClineController::class => 'show',

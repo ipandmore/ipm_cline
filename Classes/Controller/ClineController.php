@@ -1,6 +1,6 @@
 <?php
 namespace Ipandmore\IpmCline\Controller;
-
+use Psr\Http\Message\ResponseInterface;
 /***************************************************************
  *
  *  Copyright notice
@@ -37,9 +37,9 @@ class ClineController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
    */
   public function showAction()
   {
-    $settings = $this->settings;
+      $settings = $this->settings;
 
-  	if ($settings["copyrightEndTilNow"] == 1) {
+      if ($settings["copyrightEndTilNow"] == 1) {
   		$settings["copyrightEnd"]="".time()."";
   	}
 
@@ -80,5 +80,6 @@ class ClineController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
   	} else {
       $this->view->assign('settings', $settings);
     }
+      return $this->htmlResponse();
   }
 }

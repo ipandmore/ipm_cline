@@ -12,11 +12,11 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '3.0.3',
+	'version' => '4.0.1',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '11.0.0-11.5.99',
-            'rte_ckeditor' => '11.0.0-11.5.99'
+			'typo3' => '12.0.0-12.4.99',
+            'rte_ckeditor' => '12.0.0-12.4.99'
 		),
 		'conflicts' => array(
 		),
