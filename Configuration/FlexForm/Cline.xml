@@ -1,80 +1,58 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <T3DataStructure>
 	<sheets>
 		<main>
 			<ROOT>
-				<TCEforms>
-					<label>LLL:EXT:ipm_cline/Resources/Private/Language/locallang.xlf:flexform.main</label>
-				</TCEforms>
+				<sheetTitle>LLL:EXT:ipm_cline/Resources/Private/Language/locallang.xlf:flexform.main</sheetTitle>
 				<type>array</type>
 				<el>
 					<settings.mergeFieldsAsAOneLiner>
-						<TCEforms>
-							<label>LLL:EXT:ipm_cline/Resources/Private/Language/locallang.xlf:flexform.mergeFieldsAsAOneLiner</label>
-							<config>
-								<type>check</type>
-							</config>
-						</TCEforms>
+						<label>LLL:EXT:ipm_cline/Resources/Private/Language/locallang.xlf:flexform.mergeFieldsAsAOneLiner</label>
+						<config>
+							<type>check</type>
+						</config>
 					</settings.mergeFieldsAsAOneLiner>
 					<settings.startWithCopyrightLabel>
-						<TCEforms>
-							<label>LLL:EXT:ipm_cline/Resources/Private/Language/locallang.xlf:flexform.startWithCopyrightLabel</label>
-							<config>
-								<type>check</type>
-							</config>
-						</TCEforms>
+						<label>LLL:EXT:ipm_cline/Resources/Private/Language/locallang.xlf:flexform.startWithCopyrightLabel</label>
+						<config>
+							<type>check</type>
+						</config>
 					</settings.startWithCopyrightLabel>
 					<settings.copyrightStart>
-						<TCEforms>
-							<label>LLL:EXT:ipm_cline/Resources/Private/Language/locallang.xlf:flexform.copyrightStart</label>
-							<config>
-								<type>input</type>
-								<renderType>inputDateTime</renderType>
-								<eval>date</eval>
-							</config>
-						</TCEforms>
+						<label>LLL:EXT:ipm_cline/Resources/Private/Language/locallang.xlf:flexform.copyrightStart</label>
+						<config>
+							<type>datetime</type>
+							<format>date</format>
+						</config>
 					</settings.copyrightStart>
 					<settings.copyrightEnd>
-						<TCEforms>
-							<label>LLL:EXT:ipm_cline/Resources/Private/Language/locallang.xlf:flexform.copyrightEnd</label>
-							<config>
-								<type>input</type>
-								<renderType>inputDateTime</renderType>
-								<eval>date</eval>
-							</config>
-						</TCEforms>
+						<label>LLL:EXT:ipm_cline/Resources/Private/Language/locallang.xlf:flexform.copyrightEnd</label>
+						<config>
+							<type>datetime</type>
+							<format>date</format>
+						</config>
 					</settings.copyrightEnd>
 					<settings.copyrightEndTilNow>
-						<TCEforms>
-							<label>LLL:EXT:ipm_cline/Resources/Private/Language/locallang.xlf:flexform.copyrightEndTilNow</label>
-							<config>
-								<type>check</type>
-							</config>
-						</TCEforms>
+						<label>LLL:EXT:ipm_cline/Resources/Private/Language/locallang.xlf:flexform.copyrightEndTilNow</label>
+						<config>
+							<type>check</type>
+						</config>
 					</settings.copyrightEndTilNow>
 					<settings.copyrightDateFormat>
-						<TCEforms>
-							<label>LLL:EXT:ipm_cline/Resources/Private/Language/locallang.xlf:flexform.copyrightDateFormat</label>
-							<config>
-								<type>input</type>
-								<eval>required</eval>
-								<default>d-m-Y</default>
-								<placeholder>d-m-Y</placeholder>
-								<max>5</max>
-							</config>
-						</TCEforms>
+						<label>LLL:EXT:ipm_cline/Resources/Private/Language/locallang.xlf:flexform.copyrightDateFormat</label>
+						<config>
+							<type>input</type>
+							<eval>required</eval>
+							<default>d-m-Y</default>
+							<placeholder>d-m-Y</placeholder>
+							<max>5</max>
+						</config>
 					</settings.copyrightDateFormat>
 					<settings.bodytext>
-						<TCEforms>
-							<label>LLL:EXT:ipm_cline/Resources/Private/Language/locallang.xlf:flexform.bodytext</label>
-								<config>
-								  <type>text</type>
-								  <cols>40</cols>
-								  <rows>5</rows>
-		                          <enableRichtext>1</enableRichtext>
-								  <richtextConfiguration>default</richtextConfiguration>
-								</config>
-						</TCEforms>
+						<label>LLL:EXT:ipm_cline/Resources/Private/Language/locallang.xlf:flexform.bodytext</label>
+						<config>
+							<type>text</type>
+							<enableRichtext>1</enableRichtext>
+						</config>
 					</settings.bodytext>
 				</el>
 			</ROOT>

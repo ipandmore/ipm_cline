@@ -56,4 +56,6 @@ There are currently no wishes open. Feel free to contact us with your wishes.
 Change log
 ==========
 
-BREAKING CHANGE: Version 1.4.0 moves predefined css from main typoscript to extended; if you want to use it, you have to include the additional "IPM C-Line CSS" TypoScript in your root page.
+Version 5.0.0: Static TypoScript is now available via sets - define your dependency e.g. in your site package
+
+Version 1.4.0: BREAKING CHANGE: predefined css moved from main typoscript to extended; if you want to use it, you have to include the additional "IPM C-Line CSS" TypoScript in your root page.

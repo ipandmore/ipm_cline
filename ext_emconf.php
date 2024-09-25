@@ -15,8 +15,8 @@ $EM_CONF[$_EXTKEY] = array(
 	'version' => '4.0.2',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '12.0.0-12.4.99',
-            'rte_ckeditor' => '12.0.0-12.4.99'
+			'typo3' => '13.0.0-13.4.99',
+            'rte_ckeditor' => '13.0.0-13.4.99'
 		),
 		'conflicts' => array(
 		),
